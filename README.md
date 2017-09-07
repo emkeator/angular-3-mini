@@ -4,6 +4,8 @@
 
 In this project, we'll implement routing into an Angular application. You'll notice that the `js/` folder has another level of folders inside of it. The Angular community has found the best way to organize your files, so your project can scale, is too break out your code into "features". Therefore, you'll find all the HTML and JS for each feature in its folder. Take a minute to get familiar with the file structure.
 
+Live example: <a href="https://devmountain.github.io/angular-3-mini/#!/">Click Me!</a>`
+
 ## Setup
 
 * Fork and clone this repository.
@@ -19,7 +21,7 @@ In this step, we'll create a container where the routing HTML will live. We'll a
 
 ### Instructions
 
-* Open `index.html`.
+* Open `index.html`.`
 * Above your `scripts` tags in the `body`, create a new `div` with a class of `menu`.
   * Inside of `menu` and a `ul` element with three `li` elements:
   * Each `li` element should contain an `a` element with a `ui-sref` attribute that equals the name of the feature.
