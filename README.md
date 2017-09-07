@@ -21,7 +21,7 @@ In this step, we'll create a container where the routing HTML will live. We'll a
 
 ### Instructions
 
-* Open `index.html`.`
+* Open `index.html`.
 * Above your `scripts` tags in the `body`, create a new `div` with a class of `menu`.
   * Inside of `menu` and a `ul` element with three `li` elements:
   * Each `li` element should contain an `a` element with a `ui-sref` attribute that equals the name of the feature.
