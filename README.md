@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project, we'll implement routing into an Angular application. You'll notice that the `js/` folder has another level of folders inside of it. The Angular community has found the best way to organize your files, so your project can scale, is too break out your code into "features". Therefore, you'll find all the HTML and JS for each feature in its folder. Take a minute to get familiar with the file structure.
+In this project, we'll implement routing into an Angular application. You'll notice that the `js/` folder has another level of folders inside of it. The Angular community has found that the best way to organize your files, so your project can scale, is to break out your code into "features". Therefore, you'll find all the HTML and JS for each feature in its matching folder. Take a minute to get familiar with the file structure.
 
 Live example: <a href="https://devmountain.github.io/angular-3-mini/#!/">Click Me!</a>
 
@@ -22,10 +22,10 @@ In this step, we'll create a container where the routing HTML will live. We'll a
 ### Instructions
 
 * Open `index.html`.
-* Above your `scripts` tags in the `body`, create a new `div` with a class of `menu`.
-  * Inside of `menu` and a `ul` element with three `li` elements:
+* Above your `script` tags in the `body`, create a new `div` with a class of `menu`.
+  * Inside of `menu` add a `ul` element with three `li` elements:
   * Each `li` element should contain an `a` element with a `ui-sref` attribute that equals the name of the feature.
-  * The `li` for the products feature should have a nested `ul` element with an `li` for `Shoes` and `Socks`.
+  * The `li` for the "products" feature should have a nested `ul` element with an `li` for `Shoes` and `Socks`.
     * The `ui-sref` attribute on these `li` elements should use an object with an `id` property that equals `Shoes` or `Socks`.
 * Under the `div` with a class of `menu` add a new `div` with a class of `view-container`.
   * Inside of `view-container` add a `div` element with an attribute `ui-view` that doesn't equal anything
@@ -85,10 +85,10 @@ In this step, we'll inject `ui.router` into our Angular application and define t
   * Just like you would for a `controller` or `service`.
 * Inject `$stateProvider` and `$urlRouterProvider` into the anonymous function.
 * Call `$stateProvider` and chain a `.state` for each feature route ( hint: there should only be three ).
-  * `.state` should be invoked and passed two parameters:
-    * The first parameter is the `string` of the route. This much match the strings used in the previous step.
+  * `.state` should be invoked and have two parameters:
+    * The first parameter is the `string` of the route. This must match the strings used in the previous step.
       * Hint: `ui-sref`.
-    * The second parameter is and object that has three properties:
+    * The second parameter is an object that has three properties:
       * url: A string that specifies the route
       * templateUrl: A string that is a file path to the HTML. 
       * controller: A string that specifies what controller the HTML should use.
@@ -130,7 +130,7 @@ angular.module('myApp', ['ui.router']).config( function( $stateProvider, $urlRou
 
 ### Summary
 
-In this step, we'll modify the products feature to display data based on what page the user is on.
+In this step, we'll modify the "products" feature to display data based on what page the user is on.
 
 ### Instructions
 
@@ -141,7 +141,7 @@ In this step, we'll modify the products feature to display data based on what pa
   * If it is `'shoes'` create a new `$scope` variable called `productData` and set it equal to `productsSrvc.shoeData`.
   * If it is `'socks'` create a new `$scope` variable called `productData` and set it equal to `productsSrvc.sockData`.
 * Open `js/products/productsTmpl.html`.
-* Add a new `div` element that use `ng-repeat` on `$scope.productData`.
+* Add a new `div` element that uses `ng-repeat` on `$scope.productData`.
   * Add three `p` elements inside the div to show the value of `type`, `color`, and `size`.
 * Open `index.html`.
   * Include new `script` tags for the `productsCtrl` and `productsSrvc` javascript files.
